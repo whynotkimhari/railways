@@ -1,0 +1,131 @@
+#menu-title {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+#menu-title img {
+  width: 57%;
+}
+
+#menu-rail {
+  justify-content: center;
+  
+}
+
+#menu-rail img {
+  width: 100%;
+}
+
+#menu {
+  width: 100%; /* Full viewport width */
+  height: 100%; /* Full viewport height */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth hide animation */
+}
+
+#menu-input {
+  margin: 20px 0;
+  align-items: center; /* Centers child elements horizontally */
+  justify-content: center; /* Centers child elements vertically */  
+}
+
+#menu-input > input[type="text"] {
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  border: 4px solid #D4B777;
+  width: 55%;
+  height: 103px;
+  line-height: 40px;
+  padding-left: 20px;
+  color: #AD925580;
+}
+
+#menu-input > input[type="text"]:focus {
+  outline: none;
+}
+
+#menu-input > input[type="text"]::placeholder {
+  color: #AD925580;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+#menu-input > div {
+  width: 57%;
+}
+
+#difficulty {
+  border: 4px solid #B4BFA3;
+  background-color: white;
+  color: #B4BFA3;
+  width: 70%;
+  margin: 10px 10px 10px 0;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 20px;
+  height: 220px;
+}
+
+#difficulty h2 {
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+#difficulty p {
+  font-size: 21px;
+  line-height: 26px;
+  margin-top: 14px;
+}
+
+#difficulty div {
+  justify-content: space-evenly;
+}
+
+.btn-cont {
+  width: 45%;
+}
+
+#difficulty button {
+  background-color: white;
+  color: #B4BFA3;
+  border: 4px solid #B4BFA3;
+  border-radius: 20px;
+  width: 100%;
+  height: 105px;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.diff-btn-clicked {
+  background-color: #EAEFD3 !important;
+  color: #505168 !important;
+}
+
+#buttons {
+  width: 30%;
+  margin-top: 20px;
+  justify-content: space-evenly;
+  margin-left: 10px;
+  height: 226px;
+}
+
+#rules-btn {
+  height: 105px;
+  margin-bottom: 8px;
+  border: 4px solid #B4BFA3;
+  background-color: #EAEFD3;
+  border-radius: 20px;
+  color: #505168;
+}
+
+#start-btn {
+  height: 105px;
+  border: 4px solid #28233A;
+  border-radius: 20px;
+  background-color: #505168;
+  color: white;
+  margin-top: 8px;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Kingdom's Railway Network</title>
+  <link rel="icon" href="assets/oasis.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/thumbnail.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/rules.css">
+  <link rel="stylesheet" href="css/game.css">
+  <link rel="stylesheet" href="css/leader-board.css">
+</head>
+<body>
+  <div id="thumbnail">
+    <!-- <img src="assets/Thumbnail.svg" alt="Thumbnail"> -->
+  </div>
+
+  <div id="rules" class="hidden flex-row">
+    <div id="rules-container" class="flex-col">
+      <h2>RULES</h2>
+      <p>In Seeknotland, King No-Name wants to build a circular railway that visits every corner of his realm.</p>
+      <p>In the game, by clicking left mouse into the tile in game - you will place/switch the type of rail.</p>
+      <p>In the game, by clicking right mouse into the tile in game - you will delete the rail on the tile.</p>
+      <p>You can hover over below tile to see how rail is placed</p>
+      <div class="flex-col">
+        <div class="flex-row">
+          <div class="rules-item">
+            <img src="assets/empty.svg" alt="Empty tile">
+            <p>In this cell, the railway can continue in any of the three directions besides the entry direction.</p>
+          </div>
+          <div class="rules-item">
+            <img src="assets/mountain.svg" alt="Mountain tile">
+            <p>These tiles have rocks that block two adjacent exits, so the train can only continue by turning 90°.</p>
+          </div>
+          <div class="rules-item">
+            <img src="assets/oasis.svg" alt="Oasis tile">
+            <p>No railway can be built on this tile.</p>
+          </div>
+          <div class="rules-item">
+            <img src="assets/bridge.svg" alt="Bridge tile">
+            <p>On this tile, the railway can only be built in the straight direction defined by the bridge.</p>
+          </div>
+        </div>
+        <p>Since we want to save on the materials for the railway network, the railway line cannot cross itself, branch off, or pass through a cell more than once!</p>
+        <div class="flex-row">
+          <button id="rules-close-btn">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="menu" class="hidden">
+    <div id="menu-title">
+      <img src="assets/title.svg" alt="Menu title">
+    </div>
+    <div id="menu-input" class="flex-col">
+      <input type="text" placeholder="WHO ARE YOU? (MAX 8 CHARACTERS)">
+      <div class="flex-row">
+        <div id="difficulty" class="flex-col">
+          <h2>SET THE DIFFICULTY!</h2>
+          <div class="flex-row">
+            <div class="btn-cont">
+              <button id="easy-btn" class="diff-btn-clicked" data-mode="EASY">5 X 5</button>
+              <p>EASY</p>
+            </div>
+            <div class="btn-cont">
+              <button id="hard-btn" data-mode="HARD">7 X 7</button>
+              <p>HARD</p>
+            </div>
+          </div>
+        </div>
+        <div id="buttons" class="flex-col">
+          <button id="rules-btn">RULES</button>
+          <button id="start-btn">START GAME</button>
+        </div>
+      </div>
+    </div>
+    <div id="menu-rail" class="flex-row">
+      <img src="assets/rail.svg" alt="Menu rail">
+    </div>
+  </div>
+
+  <div id="game" class="hidden">
+    <div id="game-fore" class="flex-row">
+      <div id="game-left-panel" class="flex-col">
+        <div id="game-title" class="flex-row">
+          <img src="assets/title.svg" alt="Game title">
+        </div>
+        <div id="game-info" class="flex-col">
+          <div id="game-designer" class="flex-col">
+            <h2>ROUTE DESIGNER:</h2>
+            <h3>TRICKLES</h3>
+          </div>
+          <hr>
+          <div id="game-time" class="flex-col">
+            <h2>ELAPSED TIME:</h2>
+            <h3></h3>
+          </div>
+          <div id="finished-time" class="flex-col hidden">
+            <h2>FINISHED IN:</h2>
+            <h3></h3>
+          </div>
+          <hr>
+          <div class="flex-row">
+            <button id="leave-btn">Leave</button>
+            <button id="back-btn" class="hidden">Menu</button>
+            <button id="leader-board-btn">Ranking</button>
+          </div>
+        </div>
+      </div>
+      <div id="game-right-panel" class="flex-col">
+        <table></table>
+      </div>
+    </div>
+    <div id="game-rail" class="flex-row">
+      <img src="assets/rail.svg" alt="Game rail">
+    </div>
+  </div>
+
+  <div id="confirmation" class="hidden">
+    <div>
+      <h2>Start a new game? Current game won't be saved!</h2>
+      <div class="flex-row">
+        <button class="yes">Yes, I do!</button>
+        <button class="no">Continue playing</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="lost" class="hidden">
+    <div>
+      <h2>You lost that game! Try a new game buddy?</h2>
+      <div class="flex-row">
+        <button class="yes">Sure!</button>
+        <button class="no">Lemme see...</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="leader-board" class="hidden flex-row">
+    <div id="leader-board-container" class="flex-col">
+      <h2>LEADER BOARD</h2>
+      <div class="flex-col">
+        <div id="leader-board-cont" class="flex-col">
+        </div>
+        <div class="flex-row">
+          <button id="leader-board-close-btn">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+#thumbnail {
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth hide animation */
+  background: url('../assets/Thumbnail.svg') no-repeat;
+  background-size: cover;
+}
